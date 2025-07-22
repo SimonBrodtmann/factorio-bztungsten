@@ -12,10 +12,6 @@ data:extend({
     order = "b-e"
 	},
 	{
-    type = "noise-layer",
-    name = "tungsten-ore"
-	},
-	{
     type = "resource",
     icon_size = 64, icon_mipmaps = 3,
     name = "tungsten-ore",

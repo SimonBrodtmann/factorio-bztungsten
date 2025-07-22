@@ -20,8 +20,8 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
   {
     type = "recipe",
     name = "advanced-carbon-furnace",
-    ingredients = {{"steel-furnace", 2}, {"stone-brick", 5}, {"tungsten-plate", 5}},
-    result = "advanced-carbon-furnace",
+    ingredients = {{type="item", name="steel-furnace", amount=2}, {type="item", name="stone-brick", amount=5}, {type="item", name="tungsten-plate", amount=5}},
+    results = {{type="item", name="advanced-carbon-furnace", amount=1}},
     energy_required = 6,
     enabled = false,
   },
@@ -102,9 +102,9 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
     energy_source =
     {
       type = "burner",
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       effectivity = 1,
-      emissions_per_minute = 4,
+      emissions_per_minute = {["pollution"] = 4},
       fuel_inventory_size = 1,
       light_flicker =
       {

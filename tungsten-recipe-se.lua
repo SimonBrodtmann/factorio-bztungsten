@@ -65,7 +65,7 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
     },
     energy_required = 60,
     ingredients = {
-      {name = mods.Krastorio2 and "enriched-tungsten" or "tungsten-ore", amount = 24},
+      {type="item", name = mods.Krastorio2 and "enriched-tungsten" or "tungsten-ore", amount = 24},
       {type = "fluid", name = "se-pyroflux", amount = 10},
     },
     enabled = false,
@@ -82,7 +82,7 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
     },
     energy_required = 60,
     ingredients = {
-      {name = mods.Krastorio2 and "enriched-tungsten" or "tungsten-ore", amount = 24},
+      {type="item", name = mods.Krastorio2 and "enriched-tungsten" or "tungsten-ore", amount = 24},
       {type = "fluid", name = "se-pyroflux", amount = 10},
     },
     enabled = false,
@@ -94,7 +94,7 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
     type = "recipe",
     name = "tungsten-ingot",
     category = "casting",
-    results = {{"tungsten-ingot", 1}},
+    results = {{type="item", name="tungsten-ingot", amount=1}},
     energy_required = 18,
     ingredients = {
       util.me.sinter() and {type = "item", name = "tungsten-powder", amount = 15} or
@@ -114,10 +114,10 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
       {icon = "__bztungsten__/graphics/icons/tungsten-powder.png", icon_size = 64, scale = 0.25, shift = {-8, -8}} or
       {icon = "__bztungsten__/graphics/icons/molten-tungsten.png", icon_size = 128, scale = 0.125, shift = {-8, -8}},
     },
-    results = {{"tungsten-carbide", 4}},
+    results = {{type="item", name="tungsten-carbide", amount=4}},
     energy_required = 40,
     ingredients = {
-      data.raw.item["coke"] and {"coke", 8} or {"coal", 16},
+      data.raw.item["coke"] and {type="item", name="coke", amount=8} or {type="item", name="coal", amount=16},
       util.me.sinter() and {type = "item", name = "tungsten-powder", amount = 15} or
       {type = "fluid", name = "molten-tungsten", amount = 375},
     },
@@ -134,11 +134,11 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
       {icon = "__bztungsten__/graphics/icons/tungsten-ingot.png", icon_size = 128, scale = 0.125, shift = {-8, -8}},
     },
     results = {
-      {name = "tungsten-plate", amount = 10},
+      {type="item", name = "tungsten-plate", amount = 10},
     },
     energy_required = 5,
     ingredients = {
-      {name = "tungsten-ingot", amount = 1}
+      {type="item", name = "tungsten-ingot", amount = 1}
     },
     enabled = false,
     always_show_made_in = true,
@@ -178,11 +178,11 @@ else
       always_show_made_in = true,
       allow_as_intermediate = false,
       ingredients = {
-        {name = "enriched-tungsten", amount = 8},
-        {name = "se-vulcanite-block", amount = 1},
+        {type="item", name = "enriched-tungsten", amount = 8},
+        {type="item", name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.me.tungsten_plate, amount = 8},
+        {type="item", name = util.me.tungsten_plate, amount = 8},
       },
       icons =
       {
@@ -207,11 +207,11 @@ else
       always_show_made_in = true,
       allow_as_intermediate = false,
       ingredients = {
-        {name = "tungsten-ore", amount = 16},
-        {name = "se-vulcanite-block", amount = 1},
+        {type="item", name = "tungsten-ore", amount = 16},
+        {type="item", name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = util.me.tungsten_plate, amount = 12},
+        {type="item", name = util.me.tungsten_plate, amount = 12},
       },
       icons =
       {
@@ -240,14 +240,14 @@ if mods["aai-industry"] and not mods["Krastorio2"] and not mods.bzfoundry then
     normal = {
       enabled = false,
       energy_required = 50,
-      ingredients = {{"tungsten-plate", 4}, {"coal", 1}},
+      ingredients = {{type="item", name="tungsten-plate", amount=4}, {type="item", name="coal", amount=1}},
       result = "tungsten-carbide",
       result_count = 2,
     },
     expensive = {
       enabled = false,
       energy_required = 50,
-      ingredients = {{"tungsten-plate", 4}, {"coal", 1}},
+      ingredients = {{type="item", name="tungsten-plate", amount=4}, {type="item", name="coal", amount=1}},
       result = "tungsten-carbide",
     },
   }

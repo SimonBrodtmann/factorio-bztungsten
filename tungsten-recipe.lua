@@ -33,7 +33,7 @@ data:extend({
   {
     type = "recipe",
     name = util.me.tungsten_plate,
-    main_product = util.me.tungsten_plate,
+    --main_product = util.me.tungsten_plate,
     category = "smelting",
     order = "d[tungsten-plate]",
     icons = (mods["Krastorio2"] and {
@@ -174,7 +174,7 @@ data:extend({
   {
     type = "recipe",
     name = util.me.tungsten_carbide_recipe,
-    main_product = util.me.tungsten_carbide_recipe,
+    --main_product = util.me.tungsten_carbide_recipe,
     category = (mods["Krastorio2"] and "smelting" or "smelting-carbon"),
     order = "z[tungsten-carbide]",
     icons = { mods.bobplates and 
@@ -232,8 +232,8 @@ data:extend({
     },
     enabled = false,
     energy_required = 5,
-    ingredients =  {{"tungsten-plate", 2}},
-    results = {{"rocket-engine-nozzle", 1}},
+    ingredients =  {{type="item", name="tungsten-plate", amount=2}},
+    results = {{type="item", name="rocket-engine-nozzle", amount=1}},
   }
 })
 
@@ -256,10 +256,10 @@ if util.me.cuw() then
       enabled = false,
       energy_required = 80,
       ingredients = {
-        {"tungsten-plate", 15},
-        {"copper-plate", 5},
+        {type="item", name="tungsten-plate", amount=15},
+        {type="item", name="copper-plate", amount=5},
       },
-      results = {{"cuw", 20}},
+      results = {{type="item", name="cuw", amount=20}},
     },
   })
   util.add_unlock(util.me.tungsten_processing, "cuw")
