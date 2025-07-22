@@ -49,18 +49,10 @@ data:extend({
           {
       filename = "__bztungsten__/graphics/entity/ores/tungsten-ore.png",
       priority = "extra-high",
-      size = 64,
+      size = 128,
       frame_count = 8,
       variation_count = 8,
-      hr_version =
-      {
-      filename = "__bztungsten__/graphics/entity/ores/hr-tungsten-ore.png",
-        priority = "extra-high",
-        size = 128,
-        frame_count = 8,
-        variation_count = 8,
-        scale = 0.5
-      }
+      scale = 0.5,
           }
     },
   },

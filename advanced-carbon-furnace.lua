@@ -130,42 +130,22 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
         {
           filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
           priority = "high",
-          width = 85,
-          height = 87,
-          frame_count = 1,
-          shift = futil.by_pixel(-1.5, 1.5),
-          tint = {a = 1, r = .55, g = .6, b = .6},
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace.png",
-            priority = "high",
-            width = 171,
+          width = 171,
             height = 174,
             frame_count = 1,
             shift = futil.by_pixel(-1.25, 2),
             scale = 0.5,
             tint = {a = 1, r = .55, g = .6, b = .6},
-          }
         },
         {
           filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
           priority = "high",
-          width = 139,
-          height = 43,
-          frame_count = 1,
-          draw_as_shadow = true,
-          shift = futil.by_pixel(39.5, 11.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-shadow.png",
-            priority = "high",
-            width = 277,
+          width = 277,
             height = 85,
             frame_count = 1,
             draw_as_shadow = true,
             shift = futil.by_pixel(39.25, 11.25),
             scale = 0.5
-          }
         }
       }
     },
@@ -181,24 +161,12 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
           filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
           priority = "high",
           line_length = 8,
-          width = 29,
-          height = 40,
-          frame_count = 48,
-          direction_count = 1,
-          shift = futil.by_pixel(-0.5, 6),
-          hr_version =
-          {
-            animation_speed = 0.25,
-            filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-fire.png",
-            priority = "high",
-            line_length = 8,
             width = 57,
             height = 81,
             frame_count = 48,
             direction_count = 1,
             shift = futil.by_pixel(-0.75, 5.75),
             scale = 0.5
-          }
         },
       },
       {
@@ -225,17 +193,6 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
           filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
           priority = "high",
           line_length = 1,
-          width = 64,
-          height = 74,
-          frame_count = 1,
-          direction_count = 1,
-          shift = futil.by_pixel(0, -4),
-          blend_mode = "additive",
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-working.png",
-            priority = "high",
-            line_length = 1,
             width = 128,
             height = 150,
             frame_count = 1,
@@ -243,7 +200,6 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
             shift = futil.by_pixel(0, -5),
             blend_mode = "additive",
             scale = 0.5,
-          }
         }
       },
       {
@@ -256,18 +212,6 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
           filename = "__base__/graphics/entity/steel-furnace/steel-furnace-ground-light.png",
           priority = "high",
           line_length = 1,
-          draw_as_sprite = false,
-          width = 78,
-          height = 64,
-          frame_count = 1,
-          direction_count = 1,
-          shift = futil.by_pixel(0, 48),
-          blend_mode = "additive",
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-ground-light.png",
-            priority = "high",
-            line_length = 1,
             draw_as_sprite = false,
             width = 152,
             height = 126,
@@ -276,7 +220,6 @@ if util.me.get_setting("bztungsten-advanced-carbon-furnace") == "yes" and not mo
             shift = futil.by_pixel(1, 48),
             blend_mode = "additive",
             scale = 0.5,
-          }
         },
       },
     },
