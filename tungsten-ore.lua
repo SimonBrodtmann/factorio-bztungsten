@@ -1,5 +1,4 @@
 local resource_autoplace = require('resource-autoplace');
-local noise = require('noise');
 
 local util = require("__bztungsten__.data-util");
 
