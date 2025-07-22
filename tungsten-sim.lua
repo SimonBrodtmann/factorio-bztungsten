@@ -16,8 +16,8 @@ data.raw["utility-constants"]["default"].main_menu_simulations["tungsten-nozzle"
   [[
     local logo = game.surfaces.nauvis.find_entities_filtered{
       name = "factorio-logo-11tiles", limit = 1}[1]
-    game.camera_position = {logo.position.x, logo.position.y+8}
-    game.camera_zoom = 1.5
+    game.simulation.camera_position = {logo.position.x, logo.position.y+8}
+    game.simulation.camera_zoom = 1.5
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
   ]],
