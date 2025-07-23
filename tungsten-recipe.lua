@@ -45,34 +45,10 @@ data:extend({
         {
           { icon = "__bztungsten__/graphics/icons/tungsten-plate.png", icon_size = 128},
         }),
-    normal = (mods["Krastorio2"] and
-        {
-          enabled = false,
-          energy_required = 24,
-          ingredients = {{"tungsten-ore", 15}},
-          result = util.me.tungsten_plate,
-          result_count = 5,
-        } or
-        {
-          enabled = false,
-          energy_required = 32/15,
-          ingredients = {{"tungsten-ore", mods.bobplates and 4 or 2}},
-          result = util.me.tungsten_plate,
-        }),
-    expensive = (mods["Krastorio2"] and
-        {
-          enabled = false,
-          energy_required = 32,
-          ingredients = {{"tungsten-ore", 20}},
-          result = util.me.tungsten_plate,
-          result_count = 5,
-        } or
-        {
-          enabled = false,
-          energy_required = 48/15,
-          ingredients = {{"tungsten-ore", mods.bobplates and 6 or 3}},
-          result = util.me.tungsten_plate,
-        }),
+    enabled = false,
+    energy_required = mods["Krastorio2"] and 24 or 32/15,
+    ingredients = {{type="item", name="tungsten-ore", amount=mods["Krastorio2"] and 15 or (mods.bobplates and 4 or 2)}},
+    results = {{type="item", name=util.me.tungsten_plate, amount=mods["Krastorio2"] and 5 or 1}}
   },
   {
     type = "technology",
@@ -118,24 +94,10 @@ data:extend({
     subgroup = "raw-material",
     category = "big-smelting",
     order = "d[tungsten-plate]",
-    normal =
-    {
-      enabled = false,
-      energy_required = 6, --TODO
-      ingredients = {{"tungsten-ore", 100}},
-      results = {
-        {type="item", name = util.me.tungsten_plate, amount=50},
-      }
-    },
-    expensive =
-    {
-      enabled = false,
-      energy_required = 15, --TODO
-      ingredients = {{"tungsten-ore", 99}},
-      results = {
-        {type="item", name = util.me.tungsten_plate, amount=33},
-      }
-    }
+    enabled = false,
+    energy_required = 6, --TODO
+    ingredients = {{type="item", name="tungsten-ore", amount=100}},
+    results = {{type="item", name = util.me.tungsten_plate, amount=50}}
   } or nil,
 })
 
@@ -181,33 +143,10 @@ data:extend({
       { icon = "__bobplates__/graphics/icons/plate/tungsten-carbide-plate.png", icon_size = 64}
       or { icon = "__bztungsten__/graphics/icons/tungsten-carbide.png", icon_size = 128}
     },
-    normal = (mods["Krastorio2"] and
-        {
-          enabled = false,
-          energy_required = 48,
-          ingredients = {{"tungsten-plate", 10}, {"coke", 5}},
-          result = "tungsten-carbide",
-          result_count = 4,
-        } or {
-          enabled = false,
-          energy_required = 64/3,
-          ingredients = {{"tungsten-plate", 5}},
-          result = "tungsten-carbide",
-          result_count = 2,
-        }),
-    expensive = (mods["Krastorio2"] and
-    {
-      enabled = false,
-      energy_required = 48,
-      ingredients = {{"tungsten-plate", 10}, {"coke", 5}},
-      result = "tungsten-carbide",
-      result_count = 2,
-    } or {
-      enabled = false,
-      energy_required = 64/3,
-      ingredients = {{"tungsten-plate", 5}},
-      result = "tungsten-carbide",
-    }),
+    enabled = false,
+    energy_required = mods["Krastorio2"] and 48 or 64/3,
+    ingredients = {{type="item", name="tungsten-plate", amount=mods["Krastorio2"] and 10 or 5}, mods["Krastorio2"] and {type="item", name="coke", amount=5} or nil},
+    results = {{type="item", name="tungsten-carbide", amount=mods["Krastorio2"] and 4 or 2}}
   },
 })
 

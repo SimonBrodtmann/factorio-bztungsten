@@ -118,8 +118,7 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
     energy_required = 40,
     ingredients = {
       data.raw.item["coke"] and {type="item", name="coke", amount=8} or {type="item", name="coal", amount=16},
-      util.me.sinter() and {type = "item", name = "tungsten-powder", amount = 15} or
-      {type = "fluid", name = "molten-tungsten", amount = 375},
+      util.me.sinter() and {type = "item", name = "tungsten-powder", amount = 15} or {type = "fluid", name = "molten-tungsten", amount = 375},
     },
     enabled = false,
     always_show_made_in = true,
@@ -237,19 +236,10 @@ if mods["aai-industry"] and not mods["Krastorio2"] and not mods.bzfoundry then
       { icon = "__bztungsten__/graphics/icons/tungsten-carbide.png", icon_size = 128 },
       { icon = "__base__/graphics/icons/coal.png", icon_size = 64, icon_mipmaps=4, scale=0.25, shift= {-10, -10}},
     },
-    normal = {
-      enabled = false,
-      energy_required = 50,
-      ingredients = {{type="item", name="tungsten-plate", amount=4}, {type="item", name="coal", amount=1}},
-      result = "tungsten-carbide",
-      result_count = 2,
-    },
-    expensive = {
-      enabled = false,
-      energy_required = 50,
-      ingredients = {{type="item", name="tungsten-plate", amount=4}, {type="item", name="coal", amount=1}},
-      result = "tungsten-carbide",
-    },
+    enabled = false,
+	energy_required = 50,
+	ingredients = {{type="item", name="tungsten-plate", amount=4}, {type="item", name="coal", amount=1}},
+	results = {{type="item", name="tungsten-carbide", amount=2}},
   }
   })
   util.add_effect(util.me.tungsten_processing, {type = "unlock-recipe", recipe= "tungsten-carbide-coal"})
