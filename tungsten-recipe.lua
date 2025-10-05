@@ -15,7 +15,7 @@ data:extend({
     icon_size = 128,
     subgroup = "raw-material",
     order = "z[tungsten-carbide]",
-    stack_size = util.get_stack_size(100)
+    stack_size = 100
   },
   {
     type = "item",
@@ -24,7 +24,7 @@ data:extend({
     icon_size = 128, icon_mipmaps = 3,
     subgroup = "raw-material",
     order = "b[tungsten-plate]",
-    stack_size = util.get_stack_size(100)
+    stack_size = 100
   }
 })
 end
@@ -145,7 +145,7 @@ data:extend({
     },
     enabled = false,
     energy_required = mods["Krastorio2"] and 48 or 64/3,
-    ingredients = {{type="item", name="tungsten-plate", amount=mods["Krastorio2"] and 10 or 5}, mods["Krastorio2"] and {type="item", name="coke", amount=5} or nil},
+    ingredients = {{type="item", name="tungsten-plate", amount=mods["Krastorio2"] and 10 or 5}, mods["Krastorio2"] and {type="item", name="kr-coke", amount=5} or nil},
     results = {{type="item", name="tungsten-carbide", amount=mods["Krastorio2"] and 4 or 2}}
   },
 })
@@ -158,7 +158,7 @@ data:extend({
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "z[rocket-engine-nozzle]",
-    stack_size = util.get_stack_size(100)
+    stack_size = 100
   },
   {
     type = "recipe",
@@ -185,7 +185,7 @@ if util.me.cuw() then
       icon_size = 128,
       subgroup = "raw-material",
       order = "z[cuw]",
-      stack_size = util.get_stack_size(100),
+      stack_size = 100,
     },
     {
       type = "recipe",
@@ -218,8 +218,8 @@ data:extend({
     category = "double-smelting-carbon",
     enabled = false,
     energy_required = 32/3,
-    ingredients =  {{"tungsten-ore", 5}},
-    results = {{"tungsten-carbide", 1}},
+    ingredients =  {{type="item", name="tungsten-ore", amount=5}},
+    results = {{type="item", name="tungsten-carbide", amount=1}},
   }
 })
 util.add_effect(util.me.tungsten_processing, {type = "unlock-recipe", recipe = "double-tungsten"})

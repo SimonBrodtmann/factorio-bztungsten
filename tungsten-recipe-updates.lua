@@ -102,13 +102,14 @@ util.add_ingredient("deadlock-floor-lamp", "tungsten-plate", 2)
 
 ---- K2
 if mods["Krastorio2"] then
-  util.set_tech_recipe("engine", {{"basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
-  util.set_tech_recipe("fluid-handling", {{"basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
-  util.set_tech_recipe("optics", {{"basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
-  util.set_tech_recipe("oil-processing", {{"basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
-  util.set_tech_recipe("plastics", {{"basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
+  util.set_tech_recipe("engine", {{"kr-basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
+  util.set_tech_recipe("fluid-handling", {{"kr-basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
+  util.set_tech_recipe("optics", {{"kr-basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
+  -- TODO: Fix
+  --util.set_tech_recipe("oil-processing", {{"kr-basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
+  util.set_tech_recipe("plastics", {{"kr-basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
   if util.me.get_setting("bztungsten-avoid-military") == "yes" then
-    util.set_tech_recipe("rocketry", {{"basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
+    util.set_tech_recipe("rocketry", {{"kr-basic-tech-card", 1}, {"automation-science-pack", 1}, {"logistic-science-pack", 1}})
   end
   util.remove_prerequisite("kr-sentinel", "optics")
 

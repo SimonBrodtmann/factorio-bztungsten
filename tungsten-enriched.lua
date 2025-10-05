@@ -16,7 +16,7 @@ data:extend({
       },
     subgroup = "raw-material",
     order = "e05-a[enriched-ores]-a1[enriched-tungsten]",
-    stack_size = util.get_stack_size(100),
+    stack_size = 100,
   },
   {
     type = "recipe",
@@ -33,14 +33,14 @@ data:extend({
 	subgroup = "raw-material",
     ingredients =
     {
-      {type = "fluid", name = "ammonia", amount = 10},
+      {type = "fluid", name = "kr-ammonia", amount = 10},
       {type = "fluid", name = "water", amount = 25, catalyst_amount = 25},
       {type = "item",  name = "tungsten-ore", amount = 9}
     },
     results =
     { 
       {type = "item",  name = "enriched-tungsten", amount = 6},
-      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
+      {type = "fluid", name = "kr-dirty-water", amount = 25, catalyst_amount = 25}
     },
     crafting_machine_tint =
     {
@@ -67,30 +67,29 @@ data:extend({
       allow_productivity = true,
       ingredients = 
       {
-        {"enriched-tungsten", 15}
+        {type="item", name="enriched-tungsten", amount=15}
       },
-      result = "tungsten-plate",
-      result_count = 10,
+      results = {{type="item", name="tungsten-plate", amount=10}},
       order = "b[tungsten-plate]-b[enriched-tungsten-plate]"
   },	
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-tungsten",
-		category = "fluid-filtration",
+		category = "kr-fluid-filtration",
 		icons =
 		{
 			{
-				icon = data.raw.fluid["dirty-water"].icon,
-				icon_size = data.raw.fluid["dirty-water"].icon_size
+				icon = data.raw.fluid["kr-dirty-water"].icon,
+				icon_size = data.raw.fluid["kr-dirty-water"].icon_size
 			},
 			{
 				icon = data.raw.item["tungsten-ore"].icon,
 				icon_size =	data.raw.item["tungsten-ore"].icon_size,
-				scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size/data.raw.item["tungsten-ore"].icon_size),
+				scale = 0.20,
 				shift = {0, 4}
 			}
 		},
-		icon_size = data.raw.fluid["dirty-water"].icon_size,
+		icon_size = data.raw.fluid["kr-dirty-water"].icon_size,
 		energy_required = 2,
 		enabled = false,
 		allow_as_intermediate = false,
@@ -98,7 +97,7 @@ data:extend({
 		always_show_products = true,
 		ingredients =
 		{
-			{type = "fluid", name = "dirty-water", amount = 100, catalyst_amount = 100},
+			{type = "fluid", name = "kr-dirty-water", amount = 100, catalyst_amount = 100},
 		},
 		results =
 		{

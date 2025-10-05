@@ -40,8 +40,8 @@ if mods.Krastorio2 then
       type = "string-setting",
       name = "bztungsten-mining-fluid-k2",
       setting_type = "startup",
-      default_value = "mineral-water",
-      allowed_values = {"mineral-water", "water"},
+      default_value = "kr-mineral-water",
+      allowed_values = {"kr-mineral-water", "water"},
       order = "aga",
     },
     {

@@ -40,7 +40,7 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
     icons = {{icon = "__bztungsten__/graphics/icons/tungsten-powder.png", icon_size = 64, icon_mipmaps = 3}},
     order = "b-a-x",
     subgroup = "tungsten",
-    stack_size = util.get_stack_size(200),
+    stack_size = 200,
   } or {
     type = "fluid",
     name = "molten-tungsten",
@@ -117,7 +117,7 @@ if string.sub(mods["space-exploration"], 1, 3) >= "0.6" then
     results = {{type="item", name="tungsten-carbide", amount=4}},
     energy_required = 40,
     ingredients = {
-      data.raw.item["coke"] and {type="item", name="coke", amount=8} or {type="item", name="coal", amount=16},
+      data.raw.item["kr-coke"] and {type="item", name="kr-coke", amount=8} or {type="item", name="coal", amount=16},
       util.me.sinter() and {type = "item", name = "tungsten-powder", amount = 15} or {type = "fluid", name = "molten-tungsten", amount = 375},
     },
     enabled = false,

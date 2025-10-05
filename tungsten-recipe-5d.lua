@@ -21,9 +21,8 @@ if mods["5dim_core"] then
         icon_size = 128, icon_mipmaps = 3,
         enabled = true,
         energy_required = 50,
-        ingredients = {{"tungsten-ore", 85}},
-        result = "tungsten-plate",
-        result_count = 50,
+        ingredients = {{type="item", name="tungsten-ore", amount=85}},
+        results = {{type="item", name="tungsten-plate", amount=50}},
       }
     })
   end
@@ -52,9 +51,9 @@ if mods["5dim_core"] then
             energy_required = 32/15,
             enabled = true,
             ingredients = {
-                {"tungsten-dust", 2}
+                {type="item", name="tungsten-dust", amount=2}
             },
-            result = "tungsten-plate",
+            results = {{type="item", name="tungsten-plate", amount=1}},
         },
         {
             type = "recipe",
@@ -67,7 +66,7 @@ if mods["5dim_core"] then
             energy_required = 3.2,
             enabled = true,
             ingredients = {
-                {"tungsten-ore", 1}
+                {type="item", name="tungsten-ore", amount=1}
             },
             results = {
               {type="item", name = "tungsten-dust", amount=2},
@@ -83,9 +82,8 @@ if mods["5dim_core"] then
           icon_size = 128, icon_mipmaps = 3,
           enabled = true,
           energy_required = 50,
-          ingredients = {{"tungsten-dust", 85}},
-          result = util.me.tungsten_plate,
-          result_count = 50,
+          ingredients = {{type="item", name="tungsten-dust", amount=85}},
+          results = {{type="item", name=util.me.tungsten_plate, amount=50}},
         },
         {
           type = "recipe",
@@ -97,9 +95,8 @@ if mods["5dim_core"] then
           icon_size = 128, icon_mipmaps = 3,
           enabled = true,
           energy_required = 500,
-          ingredients = {{"tungsten-plate", 85}},
-          result = util.me.tungsten_plate,
-          result_count = 20,
+          ingredients = {{type="item", name="tungsten-plate", amount=85}},
+          results = {{type="item", name=util.me.tungsten_plate, amount=20}},
         }
   })
   end
