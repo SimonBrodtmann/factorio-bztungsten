@@ -123,7 +123,7 @@ if mods["Krastorio2"] then
   -- Heat related
   util.add_ingredient("kr-fusion-reactor", cuw, 350)
   util.add_ingredient("energy-control-unit", cuw, 3)
-  util.replace_some_ingredient("kr-advanced-furnace", "rare-metals", 40, cuw, 40)
+  util.replace_some_ingredient("kr-advanced-furnace", "kr-rare-metals", 40, cuw, 40)
 
   -- Other
   if mods.bzzirconium then
@@ -146,7 +146,7 @@ if mods["Krastorio2"] then
   -- Tooling
   util.add_ingredient("kr-electric-mining-drill-mk2", "tungsten-carbide", 5)
   util.add_ingredient("kr-quarry-drill", "tungsten-carbide", 20)
-  util.replace_some_ingredient("kr-advanced-chemical-plant", "rare-metals", 40, "tungsten-carbide", 20)
+  util.replace_some_ingredient("kr-advanced-chemical-plant", "kr-rare-metals", 40, "tungsten-carbide", 20)
 end
 
 

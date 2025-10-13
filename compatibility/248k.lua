@@ -1,6 +1,6 @@
 local util = require("__bztungsten__.data-util");
 
-if mods["248k"] then
+if mods["248k-Redux"] then
   local cuw = util.me.cuw() and "cuw" or "tungsten-plate"
   util.add_ingredient("fu_ingot_recipe", cuw, 20)
   util.add_ingredient("fu_plasma_recipe", cuw, 40)
