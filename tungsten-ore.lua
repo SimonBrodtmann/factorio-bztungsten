@@ -1,6 +1,11 @@
 local resource_autoplace = require('resource-autoplace');
-
+local item_sounds = require('__base__.prototypes.item_sounds')
 local util = require("__bztungsten__.data-util");
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["tungsten-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["tungsten-ore"] = {}
+resource_autoplace.initialize_patch_set("tungsten-ore", true)
+
 
 data:extend({
 	{
@@ -56,19 +61,23 @@ data:extend({
     },
   },
   {
-      type = "item",
-      name = "tungsten-ore",
-      icon_size = 64, icon_mipmaps = 3,
-      icon = "__bztungsten__/graphics/icons/tungsten-ore.png",
-      pictures = {
-        {filename="__bztungsten__/graphics/icons/tungsten-ore.png", size=64, scale=0.25},
-        {filename="__bztungsten__/graphics/icons/tungsten-ore-2.png", size=64, scale=0.25},
-        {filename="__bztungsten__/graphics/icons/tungsten-ore-3.png", size=64, scale=0.25},
-        {filename="__bztungsten__/graphics/icons/tungsten-ore-4.png", size=64, scale=0.25},
-      },
-      subgroup = "raw-resource",
-      order = "t-c-a",
-      stack_size = 50
+    type = "item",
+    name = "tungsten-ore",
+    icon_size = 64, icon_mipmaps = 3,
+    icon = "__bztungsten__/graphics/icons/tungsten-ore.png",
+    pictures = {
+      {filename="__bztungsten__/graphics/icons/tungsten-ore.png", size=64, scale=0.25},
+      {filename="__bztungsten__/graphics/icons/tungsten-ore-2.png", size=64, scale=0.25},
+      {filename="__bztungsten__/graphics/icons/tungsten-ore-3.png", size=64, scale=0.25},
+      {filename="__bztungsten__/graphics/icons/tungsten-ore-4.png", size=64, scale=0.25},
+    },
+    subgroup = "raw-resource",
+    order = "t-c-a",
+    stack_size = 50,
+    weight = 20 * kg,
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move
   },
 })
 
